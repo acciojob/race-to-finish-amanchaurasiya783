@@ -11,11 +11,10 @@ promises.push(randomPromises('Promise2'));
 promises.push(randomPromises('Promise3'));
 promises.push(randomPromises('Promise4'));
 promises.push(randomPromises('Promise5'));
-
-Promise.any(promises).then((result)=>{
-	document.getElementById('output').innerHTML = "Resolved with " + result;
-}).catch(err=>{
-	document.getElementById('output').innerHTML = "Error with " + err;
-})
+Promise.any(promises)
+		.then((result)=>{
+				document.getElementById('output').innerHTML = "Resolved with " + result;
+		})
+		.catch(err=>console.log(err))
 // Do not change the code above this
 // add your promises to the array `promises`
