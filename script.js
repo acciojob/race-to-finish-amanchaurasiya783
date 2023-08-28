@@ -13,7 +13,7 @@ promises.push(randomPromises('Promise4'));
 promises.push(randomPromises('Promise5'));
 Promise.any(promises)
 		.then((result)=>{
-				document.getElementById('output').innerHTML = "Resolved with " + result;
+				document.getElementById('output').innerHTML = result;
 		})
 		.catch(err=>console.log(err))
 // Do not change the code above this
